@@ -1,0 +1,29 @@
+﻿<Window x:Class="Messenger.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Messenger.View"
+        mc:Ignorable="d"
+        Title="Main" Height="400" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="72*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Создать сервер" Grid.Column="1" Grid.Row="1" Command="{Binding Server}"/>
+        <Button Content="Подключиться к серверу" Grid.Column="1" Grid.Row="3" Command="{Binding Client}"/>
+        <Button Content="Выход" Grid.Column="1" Grid.Row="5" Command="{Binding Nul}"/>
+        <TextBlock Grid.Column="1" TextWrapping="Wrap" Text="Добро пожаловать" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120"/>
+    </Grid>
+</Window>
